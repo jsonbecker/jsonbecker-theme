@@ -1,9 +1,7 @@
 {{ partial "header.html" . }}  
   <div class = 'archive-content'>
         {{- range .Site.Pages }}
-          {{ if or (eq .Type "post") (eq .Type "image") }} 
             {{ partial "li.html" . }}
-          {{- end}}
         {{- end}}
   </div>
 {{ partial "footer.html" . }}
