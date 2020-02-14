@@ -1,11 +1,13 @@
 {{ partial "post_header.html" . }}  
 <div class = "row p-summary">
-      {{ .Summary }}
+      {{ .Content }}
       {{ if .Truncated }}
         <div class="perma">
-          <a href="{{ .RelPermalink }}">Read More&hellip;</a>
+          <a href="{{ .RelPermalink }}">Read More…</a>
         </div>
       {{ end }}
   </div>
   {{ partial "post_footer.html" . }}
+
+
 
