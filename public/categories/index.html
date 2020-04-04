@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <link href = "https://micro.blog/jsonbecker" rel = "me" />
-	<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
+	<link rel="me" href="https://micro.blog/" />
 	<link rel="me" href="https://twitter.com/jsonbecker" />
 	<link rel="me" href="https://github.com/jsonbecker" />
 	<link rel="me" href="https://instagram.com/jsonbecker" />
@@ -11,12 +11,12 @@
 	<link rel="micropub" href="https://micro.blog/micropub" />
 	<link rel="microsub" href="https://micro.blog/microsub" />
 	<link rel="webmention" href="https://micro.blog/webmention" />
-	<link rel="subscribe" href="https://micro.blog/users/follow" />```
+	<link rel="subscribe" href="https://micro.blog/users/follow" />
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
-  {{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-  {{ end }}
+  
+    <link href="https://www.json.blog/categories/index.xml" rel="alternate" type="application/rss+xml" title="JSONBecker" />
+    <link href="https://www.json.blog/categories/index.xml" rel="feed" type="application/rss+xml" title="JSONBecker" />
+  
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
@@ -25,15 +25,23 @@
 <script type="text/javascript">
 hljs.initHighlightingOnLoad();
 </script>
-  {{ template "_internal/twitter_cards.html" . }}
-  {{ template "_internal/opengraph.html" . }}
-  <title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:description" content=""/>
+
+  <meta property="og:title" content="Categories" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.json.blog/categories/" />
+
+
+  <title>Categories</title>
 </head>
 <body>
   <div class = "site">
     <header class = "title-bar">
       <nav>
-        <span class = "site-title"> <a href = "{{ .Site.BaseURL }}">micro.json.blog </a></span>
+        <span class = "site-title"> <a href = "https://www.json.blog">micro.json.blog </a></span>
         <span class = "nav">
           <a href = "https://jsonbecker.com">About</a>
           <a href = "https://micro.json.blog/archive" rel="me">Archive</a>
@@ -43,5 +51,18 @@ hljs.initHighlightingOnLoad();
     </header>
   <main> 
 
+
+
+
+  <h1> Archive of Posts </h1>
+  </main>
+  <footer> 
+<script type="text/javascript">
+const lightbox = GLightbox({});
+</script>
+    </footer>
+    </div>
+    </body>
+</html>
 
 

@@ -1,0 +1,5 @@
+baseurl = "https://www.json.blog"
+languageCode = "en-us"
+title = "JSONBecker"
+theme = 'jsonbecker'
+

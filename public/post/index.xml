@@ -1,0 +1,54 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on JSONBecker</title>
+    <link>https://www.json.blog/post/</link>
+    <description>Recent content in Posts on JSONBecker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Apr 2020 21:15:35 -0400</lastBuildDate>
+    
+        <atom:link href="https://www.json.blog/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://www.json.blog/post/short_evening/</link>
+      <pubDate>Fri, 03 Apr 2020 21:15:35 -0400</pubDate>
+      
+      <guid>https://www.json.blog/post/short_evening/</guid>
+      <description>&lt;p&gt;Last post of the day.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A full post in the afternoon</title>
+      <link>https://www.json.blog/post/long_afternoon/</link>
+      <pubDate>Fri, 03 Apr 2020 21:15:01 -0400</pubDate>
+      
+      <guid>https://www.json.blog/post/long_afternoon/</guid>
+      <description>&lt;p&gt;This is a post with a title that I posted in the afternoon.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.json.blog/post/this_morning/</link>
+      <pubDate>Fri, 03 Apr 2020 08:14:28 -0400</pubDate>
+      
+      <guid>https://www.json.blog/post/this_morning/</guid>
+      <description>&lt;p&gt;This is a thing I wrote in the morning.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.json.blog/post/short_post/</link>
+      <pubDate>Thu, 02 Apr 2020 21:13:36 -0400</pubDate>
+      
+      <guid>https://www.json.blog/post/short_post/</guid>
+      <description>&lt;p&gt;This is a short post that happened yesterday.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
