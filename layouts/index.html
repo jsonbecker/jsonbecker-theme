@@ -1,16 +1,23 @@
 {{ partial "header.html" . }}  
 
-{{- range .Paginator.Pages }}
-  {{ if eq .Type "post" }}
-    {{ .Render "summary"}}
-  {{- end }}
-{{- end }}
-<div class = "paginator">
-{{ if .Paginator.HasPrev }}
-  <a class = "left" href="{{ .Paginator.Prev.URL }}">←Newer Posts</a>
+{{ $posts := where site.RegularPages "Type" "post" }}
+{{ $grouped := $posts.GroupByDate "2006-01-02" }}
+{{ $paginated := (.Paginate ($grouped)) }}
+
+{{ range $paginated.PageGroups }}
+{{ $thedate := (time .Key) }}
+<h1 class="day"> {{ $thedate.Format "January 2, 2006" }}</h1>
+  {{ range .Pages.Reverse }}
+    {{ if eq .Type "post" }}
+      {{ partial "post_header.html" . }}
+       <div class = "post-content e-content">
+         {{ .Content }}
+       </div>
+     {{ partial "post_footer.html" . }}
+    {{- end }}
+  {{ end }}
+<hr>
 {{ end }}
-{{ if .Paginator.HasNext }}
-  <a href="{{ .Paginator.Next.URL }}" style = "float: right;">Older Posts→</a>
-{{ end }}
-</div>
+
+{{ partial "paginator.html" . }}
 {{ partial "footer.html" . }}
