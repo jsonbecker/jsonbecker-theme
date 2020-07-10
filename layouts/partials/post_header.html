@@ -1,9 +1,5 @@
 <article class = "h-entry">
-  <div class = "post-title">
-    <a class = "u-url" href = "{{ .Permalink }}"><time class = "date dt-published" datetime = "{{ .Date.Format "January 02, 2006 15:04:05  -0700" }}">{{ .Date.Format "January 02, 2006" }}</time> </a> <br />
-{{ if .Title }}
-    <h1 class = "p-name"><a class = "u-url" href = "{{ .Permalink }}">{{ .Title }}</a></h1>
-{{ end }}
-  </div>
-
-
+       {{ if .Title }}
+        <h2 class = "p-name  post-title"><a class = "u-url" href = "{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ end }}
+    <time class = "date dt-published" datetime = "{{ .Date.Format "January 02, 2006 15:04:05  -0700" }}"><a class = "u-url" href = "{{ .Permalink }}">{{ .Date.Format "3:04PM" }}</a></time>
