@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -18,7 +19,7 @@
     <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 <script src="/js/highlight.pack.js"></script>
@@ -34,7 +35,7 @@ hljs.initHighlightingOnLoad();
     <header class = "title-bar">
       <nav>
         <span class = "site-title"> 
-          <a href = "{{ .Site.BaseURL }}">micro.json.blog </a>
+          <a href = "{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
         </span>
         <span class = "nav">
           <a href = "https://jsonbecker.com">About</a>
@@ -44,4 +45,19 @@ hljs.initHighlightingOnLoad();
         </span>
       </nav>
     </header>
-  <main> 
+    <main>
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+    <footer> 
+      <script type="text/javascript">
+        const lightbox = GLightbox({touchNavigation: true, 
+                                    touchFollowAxis: true, 
+                                    keyboardNavigation: true,
+                                    closeButton: true});
+      </script>
+    </footer>
+  </div>
+ </body>
+</html>
+

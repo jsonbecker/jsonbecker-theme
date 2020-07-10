@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
   {{ if (eq .Page.Title "Now") }}
   {{- range first 1 .Pages }}
  {{ partial "post_header.html" . }}
@@ -48,4 +48,4 @@
 {{- end }}
 
 {{ partial "paginator.html" . }}
-{{ partial "footer.html" . }}
+{{ end }} 

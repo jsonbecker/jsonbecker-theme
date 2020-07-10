@@ -1,6 +1,6 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
   {{- range .Data.Pages.ByDate }}
     {{ partial "li.html" . }}
   {{- end}}
-{{ partial "footer.html" . -}}
+{{ end }} 
 

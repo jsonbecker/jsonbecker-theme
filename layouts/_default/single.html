@@ -1,7 +1,7 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
  {{ partial "post_header.html" . }}
  <div class = "post-content e-content">
    {{ .Content }}
  </div>
  {{ partial "post_footer.html" . }}
-{{ partial "footer.html" . -}}
+{{ end }} 

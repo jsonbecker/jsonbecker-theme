@@ -1,5 +1,4 @@
-{{ partial "header.html" . }}  
-
+{{ define "main" }}
 {{ $posts := where site.RegularPages "Type" "post" }}
 {{ $grouped := $posts.GroupByDate "2006-01-02" }}
 {{ $paginated := (.Paginate ($grouped)) }}
@@ -20,4 +19,4 @@
 {{ end }}
 
 {{ partial "paginator.html" . }}
-{{ partial "footer.html" . }}
+{{ end }}
