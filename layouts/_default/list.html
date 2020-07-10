@@ -1,7 +1,5 @@
 {{ partial "header.html" . }}
-  <h1> Archive of Posts </h1>
-  {{- range .Data.Pages.ByDate }}
+  {{- range .Pages.ByDate }}
     {{ partial "li.html" . }}
   {{- end}}
 {{ partial "footer.html" . -}}
-
