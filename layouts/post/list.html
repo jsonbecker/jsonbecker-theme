@@ -1,7 +1,6 @@
-{{ partial "header.html" . }}
-  <h1> Archive of Posts </h1>
+{{ define "main" }}
   {{- range .Data.Pages.ByDate }}
     {{ partial "li.html" . }}
   {{- end}}
-{{ partial "footer.html" . -}}
+{{ end }} 
 

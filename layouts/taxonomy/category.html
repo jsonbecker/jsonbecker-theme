@@ -1,0 +1,51 @@
+{{ define "main" }}
+  {{ if (eq .Page.Title "Now") }}
+  {{- range first 1 .Pages }}
+ {{ partial "post_header.html" . }}
+ <div class = "post-content e-content">
+   {{ .Content }}
+ </div>
+ {{ partial "post_footer.html" . }}
+  {{- end}}
+{{- end }}
+
+{{ if (eq .Page.Title "Photoblogging") }}
+{{- range .Paginator.Pages }}
+<article class = "h-entry">
+       {{ if .Title }}
+        <h2 class = "p-name  post-title"><a class = "u-url" href = "{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ end }}
+    <time class = "date dt-published" datetime = "{{ .Date.Format "January 02, 2006 15:04:05  -0700" }}"><a class = "u-url" href = "{{ .Permalink }}">{{ .Date.Format "January 02, 2006 3:04PM" }}</a></time>
+ <div class = "post-content e-content">
+   {{ .Content }}
+ </div>
+ {{ partial "post_footer.html" . }}
+  {{- end}}
+{{- end }}
+  
+{{ if (eq .Page.Title "Dogs") }}
+{{- range .Paginator.Pages }}
+<article class = "h-entry">
+       {{ if .Title }}
+        <h2 class = "p-name  post-title"><a class = "u-url" href = "{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ end }}
+    <time class = "date dt-published" datetime = "{{ .Date.Format "January 02, 2006 15:04:05  -0700" }}"><a class = "u-url" href = "{{ .Permalink }}">{{ .Date.Format "January 02, 2006 3:04PM" }}</a></time>
+       <div class = "post-content e-content">
+ <div class = "post-content e-content">
+   {{ .Content }}
+ </div>
+ {{ partial "post_footer.html" . }}
+  {{- end}}
+{{- end }}
+  
+{{ if (eq .Page.Title "Reading") }}
+  {{- range .Pages }}
+ <div class = "post-content e-content">
+       {{ .Content }}
+ </div>
+    <hr>
+  {{- end}}
+{{- end }}
+
+{{ partial "paginator.html" . }}
+{{ end }} 
