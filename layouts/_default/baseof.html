@@ -27,8 +27,6 @@
   {{ end }}
   <script src="/js/highlight.pack.js"></script>
   <script type="text/javascript"> hljs.initHighlightingOnLoad(); </script>
-  {{ template "_internal/twitter_cards.html" . }}
-  {{ template "_internal/opengraph.html" . }}
   <title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 </head>
 <body>
